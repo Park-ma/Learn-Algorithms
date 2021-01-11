@@ -31,3 +31,8 @@
 *.out
 *.app
 /cmake-build-debug/
+/.idea/Learn-Algorithms.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
