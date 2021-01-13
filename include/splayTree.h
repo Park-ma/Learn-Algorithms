@@ -24,6 +24,7 @@ namespace learn_al{
         splayNode<T>* _root;
 
         splayNode<T>* search(splayNode<T>* &root,T e,splayNode<T>* &parent);
+        splayNode<T>* insert(splayNode<T>* root,const T&e);
         splayNode<T>* splay(splayNode<T>* v);
         splayNode<T>* zag(splayNode<T>* v){
             splayNode<T>* p = v->right;
@@ -121,32 +122,35 @@ namespace learn_al{
         }
         delete v;
         v = nullptr;
+        return _root;
     }
 
     template<typename T>
     splayNode<T> *splayTree<T>::insert(const T& e) {
-        if(!_root){
-            _root = new splayNode<T>(e);
-            return _root;
-        }
-        if(e==search(e)->val)   return _root;
-        auto* v = new splayNode<T>(e);
-        splayNode<T>* t = _root;
-        if(_root->val<e){
-            v->right = t->right;
-            if(v->right)   v->right->parent = v;
-            t->right = nullptr;
-            v->left = t;
-            t->parent = v;
-            _root = v;
-        }else{
-            v->left = t->left;
-            if(v->left) v->left->parent = v;
-            t->left = nullptr;
-            v->right = t;
-            t->parent = v;
-            _root = v;
-        }
+//        if(!_root){
+//            _root = new splayNode<T>(e);
+//            return _root;
+//        }
+//        if(e==search(e)->val)   return _root;
+//        auto* v = new splayNode<T>(e);
+//        splayNode<T>* t = _root;
+//        if(_root->val<e){
+//            v->right = t->right;
+//            if(v->right)   v->right->parent = v;
+//            t->right = nullptr;
+//            v->left = t;
+//            t->parent = v;
+//            _root = v;
+//        }else{
+//            v->left = t->left;
+//            if(v->left) v->left->parent = v;
+//            t->left = nullptr;
+//            v->right = t;
+//            t->parent = v;
+//            _root = v;
+//        }
+        _root = insert(_root,e);
+        search(e);
         return _root;
     }
 
@@ -163,6 +167,24 @@ namespace learn_al{
         splayNode<T>* p = search(_root,e,parent);
         _root = splay(p?p:parent);
         return _root;
+    }
+
+    template<typename T>
+    splayNode<T> *splayTree<T>::insert(splayNode<T> *root, const T &e) {
+        if(!root){
+            auto *p = new splayNode<T>(e);
+            return p;
+        }
+        if(root->val==e)
+            return root;
+        if(e<root->val){
+            root->left = insert(root->left,e);
+            root->left->parent = root;
+        }else{
+            root->right = insert(root->right,e);
+            root->right->parent = root;
+        }
+        return root;
     }
 
 

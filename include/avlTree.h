@@ -80,10 +80,12 @@ namespace learn_al{
             auto* p = new avlNode<T>(e);
             return p;
         }
+        if(root->val==e)
+            return root;
         if(e<root->val){
             root->left = insert(root->left,e);
             root = reBalance(root);
-        }else{
+        }else if(e>root->val){
             root->right = insert(root->right,e);
             root = reBalance(root);
         }
