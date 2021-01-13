@@ -4,7 +4,15 @@
 
 #ifndef LEARN_ALGORITHMS_AVLTREE_H
 #define LEARN_ALGORITHMS_AVLTREE_H
+#include <string>
+#include <queue>
+#include <iostream>
+
+
 namespace learn_al{
+    using std::string;
+    using std::queue;
+    using std::cout;
     template<typename T>
     struct avlNode{
         T val;
@@ -42,6 +50,7 @@ namespace learn_al{
         avlNode<T>* remove(avlNode<T>* root,T e);
         avlNode<T>* insert(avlNode<T>*root,T e);
         avlNode<T>* reBalance(avlNode<T>* root);
+        void printTree(avlNode<T>* root);
     public:
         avlTree(const T e){
             _root = new avlNode<T>(e);
@@ -50,6 +59,9 @@ namespace learn_al{
         void insert(T e);
         void remove(T e);
         avlNode<T>* search(T e);
+        void printTree(){
+            printTree(_root);
+        }
     };
     template<typename T>
     avlNode<T>* avlTree<T>::connect34(avlNode<T>*a,avlNode<T>*b,avlNode<T>*c,
@@ -172,6 +184,25 @@ namespace learn_al{
                           v->right->right->left,v->right->right->right);
         }
         return v;
+    }
+
+    template<typename T>
+    void avlTree<T>::printTree(avlNode<T> *root) {
+        queue<avlNode<T>*> q;
+        if(root) q.push(root);
+        while (!q.empty()){
+            int size = q.size();
+            for(int i=0;i<size;i++){
+                avlNode<T>* p = q.front();
+                q.pop();
+                if(p->left)
+                    q.push(p->left);
+                if(p->right)
+                    q.push(p->right);
+                cout<<'\t'<<p->val<<'\t';
+            }
+            cout<<std::endl;
+        }
     }
 }
 #endif //LEARN_ALGORITHMS_AVLTREE_H
