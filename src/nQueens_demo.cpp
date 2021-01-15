@@ -1,6 +1,4 @@
-//
-// Created by park on 2021/1/12.
-//
+
 #include "nQueens.h"
 #include <iostream>
 #include <vector>

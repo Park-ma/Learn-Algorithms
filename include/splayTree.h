@@ -1,6 +1,3 @@
-//
-// Created by park on 2021/1/13.
-//
 
 #ifndef LEARN_ALGORITHMS_SPLAYTREE_H
 #define LEARN_ALGORITHMS_SPLAYTREE_H

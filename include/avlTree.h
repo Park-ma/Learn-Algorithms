@@ -1,6 +1,3 @@
-//
-// Created by park on 2021/1/12.
-//
 
 #ifndef LEARN_ALGORITHMS_AVLTREE_H
 #define LEARN_ALGORITHMS_AVLTREE_H

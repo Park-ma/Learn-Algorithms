@@ -1,6 +1,4 @@
-//
-// Created by park on 2021/1/14.
-//
+
 #include "BTree.h"
 
 int main(){

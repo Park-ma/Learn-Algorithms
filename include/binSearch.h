@@ -1,6 +1,4 @@
-//
-// Created by park on 2021/1/11.
-//
+
 
 #ifndef LEARN_ALGORITHMS_BINSEARCH_H
 #define LEARN_ALGORITHMS_BINSEARCH_H

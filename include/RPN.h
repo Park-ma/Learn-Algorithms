@@ -1,6 +1,4 @@
-//
-// Created by park on 2021/1/12.
-//
+
 
 #ifndef LEARN_ALGORITHMS_RPN_H
 #define LEARN_ALGORITHMS_RPN_H

@@ -1,6 +1,4 @@
-//
-// Created by park on 2021/1/13.
-//
+
 #include <splayTree.h>
 
 int main(){

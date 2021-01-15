@@ -1,6 +1,3 @@
-//
-// Created by park on 2021/1/12.
-//
 #include "avlTree.h"
 
 int main(){

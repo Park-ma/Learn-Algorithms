@@ -1,6 +1,4 @@
-//
-// Created by park on 2021/1/11.
-//
+
 #include <iostream>
 #include "shuffle.h"
 int main(){

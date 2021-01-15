@@ -1,6 +1,4 @@
-//
-// Created by park on 2021/1/14.
-//
+
 
 #ifndef LEARN_ALGORITHMS_BTREE_H
 #define LEARN_ALGORITHMS_BTREE_H
