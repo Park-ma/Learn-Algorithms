@@ -31,14 +31,16 @@ namespace learn_al{
         avlNode<T>* rotateAt(avlNode<T>* v);
         avlNode<T>* getSucc(avlNode<T>* v){
             if(!v)  return v;
-            while (v->right)
-                v = v->right;
+            v =v->right;
+            while (v->left)
+                v = v->left;
             return v;
         }
         avlNode<T>* getPos(avlNode<T>* v){
             if(!v)  return v;
-            while (v->left)
-                v = v->left;
+            v = v->left;
+            while (v->right)
+                v = v->right;
             return v;
         }
         bool isBalanced(avlNode<T>* root);
