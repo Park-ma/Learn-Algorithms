@@ -8,10 +8,12 @@ namespace learn_al{
     private:
         vector<int> parent;
         vector<int> rank;
+        int _size;
     public:
-        Djset(int n):parent(vector<int>(n)),rank(vector<int>(n)){
+        Djset(int n):parent(vector<int>(n)),rank(vector<int>(n)),_size(n){
             for (int i = 0; i < n; ++i) {
                 parent[i] = i;
+                rank[i] = 1;
             }
         }
         int find(int x){
@@ -35,6 +37,9 @@ namespace learn_al{
         }
         bool isUnion(int i,int j){
             return find(i)==find(j);
+        }
+        int size(){
+            return _size;
         }
 
     };
