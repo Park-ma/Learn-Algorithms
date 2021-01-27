@@ -3,6 +3,8 @@
 #define LEARN_ALGORITHMS_KRUSKAL_H
 #include "UnionFind.h"
 namespace learn_al{
-    class
+    class Kruskal{
+
+    };
 }
 #endif //LEARN_ALGORITHMS_KRUSKAL_H
