@@ -8,7 +8,7 @@
 
 |名称|代码|笔记|
 |------|------|-----|
-|AVL树|[avlTree](./include/avlTree.h)||
+|AVL树|[avlTree](./include/avlTree.h)|[AVL note](./notes/avlTree.md)|
 |伸展树|[splayTree](./include/splayTree.h)||
 |红黑树|[RBTree](./include/RBTree.h)
 |B 树|[BTree](./include/BTree.h)
